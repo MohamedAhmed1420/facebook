@@ -6,17 +6,40 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Facebook",
-          style: TextStyle(
-            fontSize: 30,
-            color: Appcolors.blue,
-            fontWeight: FontWeight.w800,
+    return DefaultTabController(
+      length: 6,
+      child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          title: Text(
+            "Facebook",
+            style: TextStyle(
+              fontSize: 30,
+              color: Appcolors.blue,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+          actions: [
+            Icon(Icons.add_box_outlined),
+            SizedBox(width: 12),
+            Icon(Icons.search),
+            SizedBox(width: 12),
+            Icon(Icons.message),
+          ],
+          bottom: TabBar(
+            tabs: [
+              Tab(icon: Icon(Icons.home)),
+              Tab(icon: Icon(Icons.ondemand_video)),
+              Tab(icon: Icon(Icons.house_rounded)),
+              Tab(icon: Icon(Icons.person_pin)),
+              Tab(icon: Icon(Icons.add_alert_sharp)),
+              Tab(icon: CircleAvatar(child: Image.asset("assets/images/goat.png"))),
+            ],
           ),
         ),
-
+        body: Column(
+          
+        )
       ),
     );
   }
