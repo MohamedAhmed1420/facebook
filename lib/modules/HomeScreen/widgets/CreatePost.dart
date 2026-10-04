@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/AppColors.dart';
+import '../../../core/AppColors.dart';
 
 class CreatePost extends StatelessWidget {
   const CreatePost({super.key});
